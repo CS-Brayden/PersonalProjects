@@ -1,0 +1,8 @@
+-Screen Time Tracker 
+(A tool that tracks and reports on screen time, helping users manage their device usage and promote healthy habits)
+
+-Involves web scraping and AI
+(News/website aggregated, Sentiment, analyse images, summary, (Develop a tool that scrapes headlines and articles from multiple news sites, categorizes them by topic, provides sentiment analysis, chatbot, and uses illustrations (common terms, positive and negative terms, etc). Could be for social media or product reviews as well)
+
+-Document summary and comparison
+(Similar to previous, specifically for downloaded documents)

@@ -1,0 +1,42 @@
+News aggregator (with web scraping and AI)
+Website: News website (Alternatives: e-commerce)
+Features: Summary, sentiment, multiple sites, analyse images, or categorizes them by topic
+Illustrations: common terms, positive and negative terms, etc
+General function: takes user input, searches input on website with URL, gets returned webpages and web scraps information from each (or maybe a set amount of pages, such as 3 webpages). Web scraps headline, body of text, and comments. Uses retrieved data for AI analysis and illustrations.
+
+Potential purposes:
+-----------------------------------------------------------------------------------------------------------------------------
+Product Aggregator and Recommender
+-Gets product input, (only one product per website). The products can be different or the same
+-The user can provide other requirements, such as cost range
+-Finds product on each website (three websites by default, others can be added)
+-Asks user to choose one if multiple products appear on a website
+-The program displays each of the products (one per website) and the related static information (price, description, etc.)
+-The program displays a sentiment analysis and summary of the reviews for each
+-The program provides a recommendation
+-The program will use a CLI menu, such as:
+1) Current settings (products, filters, websites)
+2) Search products
+3) Set filters/requirements
+4) Add website
+5) View static summary
+6) View sentiment analysis
+7) View recommendation
+8) Exit
+A persistent storage for settings would not be included, however, could be made in the future
+-----------------------------------------------------------------------------------------------------------------------------
+News Aggregator
+-Gets available categories, the user can then select one
+-Finds information regarding top news series relating to the chosen category (will consider multiple websites, users can add their own)
+-The programs provides a summary of each top new story separately with a sentiment analysis (AI will be used to remove repeated news stories across different websites)
+-The program provides a summary of each news story together (one overall summary of every top story from each website)
+-The program will use a CLI menu, such as:
+1) Select category
+2) Search current news
+3) Add/remove website
+4) View top news summaries
+5) View sentiment analysis
+6)  View overall summary
+7) Exit
+A persistent storage for settings would not be included, however, could be made in the future
+-----------------------------------------------------------------------------------------------------------------------------

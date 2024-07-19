@@ -1,0 +1,48 @@
+static ConsoleInterface(
+Properties: None 
+methods: -readCharacter - readLimitedCharacter (blocks certain characters) -printColouredString
+)
+
+Wordle(
+Properties: -setWord
+methods: -generateWord -isValidGuess (determine if the given string can be a generated word) -getCharacterMatches (whether each letter matches, wrong position, etc) -isCorrectGuess
+)
+
+RoundManager(
+Properties: -allowedGuessesNumber -guessNumber -guesses
+methods: -StartLoop (the round loop), DisplayResults (end of round statistics)
+)
+
+OverallStatisticsManager(
+Properties: -totalRounds -guessNumbers (collection containing number of guesses for each win) -currentStreak -maxStreak
+methods: -AddRound -AddGuessNumber -AddStreak -ResetStreak -GetRounds -GetGuessNumbers -GetStreak -GetMaxStreak
+)
+
+Main(
+Properties: None 
+methods: Main (infinitely call RoundManager until user chooses to quit, ask for allowedGuessesNumber. Displays statistics before each round)
+)
+
+Singleton OverallStatisticsDAO(
+Properties: None
+methods: -UpdateStatistics -SelectStatistics
+)
+
+---------------
+General process:
+
+1) when main is run: OverallStatisticsDAO will select database information to construct OverallStatisticsManager
+2) information will be displayed using the information from OverallStatisticsManager
+3) a round will be performed
+4) OverallStatisticsManager will be updated
+5) OverallStatisticsDAO will be updated using OverallStatisticsManager
+6) process repeats from 2) until the user chooses to quit (a prompt is provided here for quitting)
+
+---------------
+Database structure:
+
+ID, totalRounds, currentStreak, maxStreak, guessesCountID
+
+guessesCountID, guessValue, CountValue
+
+-Completed
